@@ -6,12 +6,13 @@ import pageObject.PageObjectMainPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
+
 public class MainFlowMiddleOrderButtonTest {
     @Test
     public void makeOrderMiddleButtonCheck() {
         // Для запуска в браузере EDGE
         //   Configuration.browser = Browsers.EDGE;
-        PageObjectMainPage mainPage =  open("https://qa-scooter.praktikum-services.ru/", PageObjectMainPage.class);
+        PageObjectMainPage mainPage = open("https://qa-scooter.praktikum-services.ru/", PageObjectMainPage.class);
         mainPage.clickCookieConfirmButton();
         mainPage.clickOrderButtonMid();
         PageObjectFormPage formPage = page(PageObjectFormPage.class);
